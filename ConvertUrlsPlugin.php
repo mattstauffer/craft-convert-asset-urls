@@ -2,11 +2,11 @@
 
 namespace Craft;
 
-class ConvertAssetUrlsPlugin extends BasePlugin
+class ConvertUrlsPlugin extends BasePlugin
 {
     public function getName()
     {
-        return Craft::t('Convert Asset URLs');
+        return Craft::t('Convert URLs');
     }
 
     public function getVersion()
@@ -26,7 +26,7 @@ class ConvertAssetUrlsPlugin extends BasePlugin
 
     public function addTwigExtension()
     {
-        Craft::import('plugins.convertAssetUrls.twigextensions.ConvertAssetUrlsTwigExtension');
-        return new ConvertAssetUrlsTwigExtension();
+        Craft::import('plugins.convertUrls.twigextensions.ConvertUrlsTwigExtension');
+        return new ConvertUrlsTwigExtension();
     }
 }
